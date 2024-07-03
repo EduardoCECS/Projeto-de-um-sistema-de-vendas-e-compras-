@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastrar Produto</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/estilo_produto.css">
+    </head>
+    <body class="bg-cliente">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light-blue fixed-top">
+                <a class="navbar-brand" href="../index.php">
+                    <img src="../img/logo.png" alt="" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Cliente/ConsultarCliente.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Cliente/FormCadCliente.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contato
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Contato/ConsultarContato.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Contato/FormCadContato.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funcionário
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Funcionario/ConsultarFuncionario.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Funcionario/FormCadFuncionario.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fornecedor
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Fornecedor/ConsultarFornecedor.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Fornecedor/FormCadFornecedor.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pedido
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Pedido/ConsultarPedido.php">Consultar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produto
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Produto/ConsultarProduto.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Produto/FormCadProduto.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente aniversariante
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Aniversariante/Aniversariante.php">Consultar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente VIP
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../ClienteVip/clientevip.php">Consultar</a></li>
+                    </ul>
+                </div>
+                
+                 <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contas
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Contas/ConsultarContas.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Contas/FormCadContas.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+        <main>
+            <section id="section-cliente" style="margin-top: 5%;">
+                <h1>Cadastrar Produto</h1>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <form method="post" action="CadastrarProduto.php" id="login">
+                        <p>
+                            <label for="nome">Nome:</label>
+                            <input id="nome" name="nome" required type="text" placeholder="Insira o nome do produto" class="form-control">
+                        </p>
+
+                        <p>
+                            <label for="tipo">Tipo:</label>
+                            <select name="tipo" id="tipo" class="form-control">
+                                <option value="brinco">Brinco</option>
+                                <option value="colar">Colar</option>
+                                <option value="anel">Anel</option>
+                                <option value="piercing">Piercing</option>
+                                <option value="pulseira">Pulseira</option>
+                                <option value="bracelete">Bracelete</option>
+                                <option value="tornozeleira">Tornozeleira</option>
+                                <option value="desconto">Desconto</option>
+                                <option value="desconto30">Desconto30</option>
+                                <option value="desconto40">Desconto40</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="qtde">Quantidade:</label>
+                            <input type="number" id="qtde" name="qtde" min="0" max="30" class="form-control">
+                        </p>
+
+                        <p>
+                            <label for="valor">Valor:</label>
+                            <input id="valor" name="valor" required type="text" placeholder="Insira o valor do produto" class="form-control">
+                        </p>
+
+                        <p>
+                            <label for="valor_compra">Valor de Compra:</label>
+                            <input id="valor_compra" name="valor_compra" required type="text" placeholder="Insira o valor de compra do produto" class="form-control">
+                        </p>
+
+                        <p>
+                            <label for="valor_venda">Valor de Venda:</label>
+                            <input id="valor_venda" name="valor_venda" required type="text" placeholder="Insira o valor de venda do produto" class="form-control">
+                        </p>
+
+                        <p>
+
+                            <label  id="lbnome">Imagem:</label>
+                            <input  type="file" id="iptnome" name="imagem" />
+
+                        </p>
+
+                        <p>
+                            <label for="descricao">Descrição:</label>
+                            <textarea id="descricao" name="descricao" required placeholder="Insira a descrição do produto" class="form-control"></textarea>
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Cadastrar" class="btn btn-primary" id="bt-login">
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/jquery-script.js"></script>
+    </body>
+</html>

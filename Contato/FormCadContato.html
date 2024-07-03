@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastrar Contato</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+            />
+        <link 
+            rel="stylesheet" href="../css/estilo_contato.css" />
+
+    </head>
+    <body class="bg-login">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light-blue fixed-top">
+                <a class="navbar-brand" href="../index.php">
+                    <img src="../img/logo.png" alt="" />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Cliente/ConsultarCliente.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Cliente/FormCadCliente.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contato
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Contato/ConsultarContato.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Contato/FormCadContato.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funcionário
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Funcionario/ConsultarFuncionario.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Funcionario/FormCadFuncionario.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fornecedor
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Fornecedor/ConsultarFornecedor.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Fornecedor/FormCadFornecedor.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pedido
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Pedido/ConsultarPedido.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Pedido/FormCadPedido.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produto
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Produto/ConsultarProduto.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Produto/FormCadProduto.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente aniversariante
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Aniversariante/Aniversariante.php">Consultar</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cliente VIP
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../ClienteVip/clientevip.php">Consultar</a></li>
+                    </ul>
+                </div>
+                
+                 <div class="dropdown" style="margin-left: 20px">
+                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contas
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Contas/ConsultarContas.php">Consultar</a></li>
+                        <li><a class="dropdown-item" href="../Contas/FormCadContas.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+        <!--Corpo da página -->
+        <main>
+            <section id="section-cliente">
+                <h1>Cadastrar Contato</h1>
+                <div class="d-flex justify-content-center">
+                    <form method="post" action="https://api.staticforms.xyz/submit" id="login">
+                        <input type="hidden" name="accessKey" value="bb42029b-389d-4cbe-a9ab-e907cb81ebe0">
+                        <input type="hidden" name="redirectTo" value="http://localhost/TatyCrisBiju/Contato/FormCadContato.html">
+                        <p>
+                            <label for="nome">Nome: </label>
+                            <input
+                                id="nome" 
+                                name="name"
+                                required="required"
+                                type="text"
+                                placeholder="Insira o seu nome"
+                                class="form-control"
+                                />
+                        </p>
+
+                        <p>
+                            <label for="tel_cel">Telefone Celular: </label>
+                            <input
+                                id="tel_cel" 
+                                name="phone"
+                                required="required"
+                                type="text"
+                                placeholder="Coloque o seu Telefone celular"
+                                class="form-control"
+                                />
+                        </p>
+
+                        <p>
+                            <label for="email">E-mail: </label>
+                            <input
+                                id="email" 
+                                name="email"
+                                required="required"
+                                type="email"
+                                placeholder="Insira seu email"
+                                class="form-control"
+                                />
+                        </p>
+
+                        <p>
+                            <label for="observacoes">Observações: </label>
+                            <textarea
+                                id="observacoes"
+                                name="message"
+                                required="required"
+                                placeholder="Insira as observações"
+                                class="form-control"
+                                ></textarea>
+                        </p>
+
+
+                        <p>
+                            <input
+                                type="submit"
+                                value="Cadastrar"
+                                class="btn btn-primary"
+                                id="bt-login"
+                                />
+                        </p>
+                    </form>
+
+
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+
+        <script>
+
+            var tel_cel = document.getElementById("tel_cel");
+
+            tel_cel.addEventListener("input", () => {
+                var limparValor = tel_cel.value.replace(/\D/g, "").substring(0, 11);
+                var numerosArray = limparValor.split("");
+                var numeroformatado = "";
+
+                if (numerosArray.length > 0) {
+                    numeroformatado += `(${numerosArray.slice(0, 2).join("")})`;
+                }
+
+                if (numerosArray.length > 2) {
+                    numeroformatado += ` ${numerosArray.slice(2, 7).join("")}`;
+                }
+
+                if (numerosArray.length > 7) {
+                    numeroformatado += `-${numerosArray.slice(7, 11).join("")}`;
+                }
+
+                tel_cel.value = numeroformatado;
+            });
+
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/script.js"></script>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"
+        ></script>
+        <script type="text/javascript" src="js/jquery-script.js"></script>
+    </body>
+</html>
